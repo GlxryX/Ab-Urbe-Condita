@@ -20,6 +20,7 @@
 *.pem
 .eslintrc
 .eslintcache
+.eslintrc.json
 
 # debug
 npm-debug.log*
