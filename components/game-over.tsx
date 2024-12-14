@@ -41,12 +41,12 @@ export default function GameOver(props: Props) {
 
   const handleShare = React.useCallback(async () => {
     await navigator.clipboard.writeText(
-      `🏛️ Ab Urbe Condita\n\n${getMedal(score)}${t.streak}: ${score}\n${getMedal(highscore)}${t.bestStreak}: ${highscore}`
+      `🏛️ ab-urbe-condita.netlify.app\n\n${getMedal(score)}${t.streak}: ${score}\n${getMedal(highscore)}${t.bestStreak}: ${highscore}`
     );
-    setShareText(t.copied); // Use the translated "Copied" text
+    setShareText(t.copied);
     setIsCopied(true);
     setTimeout(() => {
-      setShareText(t.share); // Use the translated "Share" text
+      setShareText(t.share);
       setIsCopied(false);
     }, 2000);
   }, [highscore, score, t]);
@@ -68,7 +68,6 @@ export default function GameOver(props: Props) {
       <div className={styles.buttons}>
         <Button onClick={handleReset} text={t.playAgain} />
         <Button onClick={handleShare} text={shareText} minimal />
-        <Button onClick={() => window.location.href='/'} text={t.home} />
       </div>
     </animated.div>
   );

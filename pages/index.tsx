@@ -9,11 +9,12 @@ export default function Index() {
     <>
       <Head>
         <title>Ab Urbe Condita</title>
-        <link
-          rel="shortcut icon"
-          href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%8F%9B%EF%B8%8F%3C%2Ftext%3E%3C%2Fsvg%3E"
-          type="image/svg+xml"
-        />
+        <meta name="description" content="Play Ab Urbe Condita, a Roman history timeline game." />
+        <meta property="og:title" content="Ab Urbe Condita - Home" />
+        <meta property="og:description" content="Play Ab Urbe Condita, a Roman history timeline game." />
+        <meta property="og:url" content="https://ab-urbe-condita.netlify.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/logo.png" />
       </Head>
 
       <Game />
