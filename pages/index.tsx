@@ -14,6 +14,7 @@ export default function Index() {
         <meta property="og:description" content="Play Ab Urbe Condita, a Roman history timeline game." />
         <meta property="og:url" content="https://ab-urbe-condita.netlify.app/" />
         <meta property="og:type" content="website" />
+        <meta name="theme-color" content="#23272c" />
         <meta property="og:image" content="/images/logo.png" />
       </Head>
 
