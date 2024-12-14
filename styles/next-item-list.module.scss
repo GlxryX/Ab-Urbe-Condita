@@ -1,0 +1,19 @@
+@import "./variables";
+
+.container {
+  position: relative;
+  z-index: 3; // Ensure the next up card is above the timeline
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}

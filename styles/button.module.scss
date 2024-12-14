@@ -1,0 +1,33 @@
+@import "./variables";
+
+.button {
+  border: none;
+  background: $primary;
+  color: $text-light;
+  padding: 10px 24px;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
+  white-space: nowrap;
+  transition: filter 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
+  &:active {
+    filter: brightness(0.9);
+  }
+
+  &.minimal {
+    background: none;
+    border: 2px solid $primary;
+    color: $text-light;
+
+    &:hover {
+      background: rgba($primary, 0.1);
+    }
+  }
+}

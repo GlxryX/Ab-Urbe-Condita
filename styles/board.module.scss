@@ -1,0 +1,45 @@
+.wrapper {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-template-rows: 350px auto;
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  grid-row: 1;
+  padding: 20px;
+  position: relative;
+
+  .homeButtonContainer {
+    margin-bottom: 20px;
+
+    button {
+      min-width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .buttonContainer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    button {
+      min-width: 200px; // Match home button width
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.bottom {
+  grid-row: 2;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
