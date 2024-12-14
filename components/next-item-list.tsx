@@ -10,7 +10,7 @@ interface NextItemListProps {
 }
 
 export default function NextItemList(props: NextItemListProps) {
-  const { next } = props;
+  const { next, language } = props;
 
   return (
     <div className={styles.container}>
@@ -23,7 +23,7 @@ export default function NextItemList(props: NextItemListProps) {
               className={styles.list}
             >
               {next && (
-                <ItemCard draggable index={0} item={next} key={next.id} language="latin" />
+                <ItemCard draggable index={0} item={next} key={next.id} language={language} />
               )}
               {provided.placeholder}
             </div>
