@@ -22,7 +22,7 @@ export default function ItemCard(props: Props) {
   }
 
   const displayEvent = language === 'latin' ? item.eventLatin : item.eventEnglish;
-  const displayYear = language === 'latin' ? item.yearLabelLatin : item.yearLabelEnglish;
+  const displayYear = language === 'latin' ? `${item.yearLabelLatin} AUC` : item.yearLabelEnglish;
 
   return (
     <Draggable
@@ -44,7 +44,7 @@ export default function ItemCard(props: Props) {
             <div className={styles.content}>
               <div className={styles.label}>{displayEvent}</div>
               {"played" in item && (
-                <div 
+                <div
                   className={classNames(styles.dateDisplay, {
                     [styles.correct]: item.played.correct,
                     [styles.incorrect]: !item.played.correct,
