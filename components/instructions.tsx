@@ -7,8 +7,8 @@ import { translations } from '../lib/translations';
 interface Props {
   highscore: number;
   start: () => void;
-  language: 'latin' | 'english';
-  setLanguage: React.Dispatch<React.SetStateAction<'latin' | 'english'>>;
+  language: 0 | 1;
+  setLanguage: React.Dispatch<React.SetStateAction<0 | 1>>;
 }
 
 export default function Instructions(props: Props) {
@@ -27,7 +27,7 @@ export default function Instructions(props: Props) {
 
         <div className={styles.buttons}>
           <Button
-            onClick={() => setLanguage(language === 'english' ? 'latin' : 'english')}
+            onClick={() => setLanguage(language === 1 ? 0 : 1)}
             text={t.switchLanguage}
           />
           <Button onClick={start} text={t.startGame} />

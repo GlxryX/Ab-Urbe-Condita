@@ -17,8 +17,8 @@ interface Props {
   state: GameState;
   setState: (state: GameState) => void;
   updateHighscore: (score: number) => void;
-  language: 'latin' | 'english';
-  setLanguage: React.Dispatch<React.SetStateAction<'latin' | 'english'>>;
+  language: 0 | 1;
+  setLanguage: React.Dispatch<React.SetStateAction<0 | 1>>;
 }
 
 export default function Board(props: Props) {
@@ -145,7 +145,7 @@ export default function Board(props: Props) {
           </div>
           <div className={styles.buttonContainer}>
             <Button
-              onClick={() => setLanguage(language === 'english' ? 'latin' : 'english')}
+              onClick={() => setLanguage(language === 1 ? 0 : 1)}
               text={t.switchLanguage}
             />
           </div>

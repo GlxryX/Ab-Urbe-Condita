@@ -21,7 +21,7 @@ export default function Game() {
   const [loaded, setLoaded] = useState(false);
   const [started, setStarted] = useState(false);
   const [items, setItems] = useState<Item[] | null>(null);
-  const [language, setLanguage] = useState<'latin' | 'english'>('english');
+  const [language, setLanguage] = useState<0 | 1>(0);
 
   React.useEffect(() => {
     const fetchGameData = async () => {

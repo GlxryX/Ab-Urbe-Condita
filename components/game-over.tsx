@@ -9,7 +9,7 @@ interface Props {
   highscore: number;
   resetGame: () => void;
   score: number;
-  language: 'latin' | 'english';
+  language: 0 | 1;
 }
 
 function getMedal(score: number): string {

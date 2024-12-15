@@ -9,7 +9,7 @@ interface PlayedItemListProps {
   badlyPlacedIndex: number | null;
   isDragging: boolean;
   items: Item[];
-  language: 'latin' | 'english';
+  language: 0 | 1;
 }
 
 export default function PlayedItemList(props: PlayedItemListProps) {

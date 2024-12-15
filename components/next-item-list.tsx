@@ -6,7 +6,7 @@ import styles from "../styles/next-item-list.module.scss";
 
 interface NextItemListProps {
   next: Item | null;
-  language: 'latin' | 'english';
+  language: 0 | 1;
 }
 
 export default function NextItemList(props: NextItemListProps) {

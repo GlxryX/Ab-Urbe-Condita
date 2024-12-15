@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type Language = 'latin' | 'english';
+export type Language = 0 | 1;
 
 export interface Translation {
   switchLanguage: string;
@@ -16,8 +16,8 @@ export interface Translation {
 }
 
 export interface Translations {
-  english: Translation;
-  latin: Translation;
+  0: Translation;
+  1: Translation;
 }
 
 export const HeartSvg = () => (
@@ -35,7 +35,7 @@ export const HeartSvg = () => (
 );
 
 export const translations: Translations = {
-  english: {
+  0: {
     switchLanguage: "Switch to Latin",
     startGame: "Start game",
     attribution: "Descriptions written by Gregory Stringer and Kasper McIninch",
@@ -47,7 +47,7 @@ export const translations: Translations = {
     copied: "Copied",
     home: "Home"
   },
-  latin: {
+  1: {
     switchLanguage: "Anglice lude",
     startGame: "Incipe ludum",
     attribution: "Descriptiones a Gregory Stringer et Kasper McIninch scriptae",

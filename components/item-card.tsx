@@ -10,7 +10,7 @@ type Props = {
   index: number;
   item: Item | PlayedItem;
   setFlippedId?: (flippedId: string | null) => void;
-  language: 'latin' | 'english';
+  language: 0 | 1;
 };
 
 export default function ItemCard(props: Props) {
@@ -21,8 +21,8 @@ export default function ItemCard(props: Props) {
     return null;
   }
 
-  const displayEvent = language === 'latin' ? item.eventLatin : item.eventEnglish;
-  const displayYear = language === 'latin' ? `${item.yearLabelLatin} AUC` : item.yearLabelEnglish;
+  const displayEvent = language === 0 ? item.eventEnglish : item.eventLatin;
+  const displayYear = language === 0 ? item.yearLabelEnglish : `${item.yearLabelLatin} AUC`;
 
   return (
     <Draggable
