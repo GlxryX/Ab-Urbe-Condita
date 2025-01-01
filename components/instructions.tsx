@@ -35,7 +35,7 @@ export default function Instructions(props: Props) {
 
         <div className={styles.about}>
           <div>{t.attribution}</div>
-          <div>&copy; 2024 - {t.madeBy}</div>
+          <div>&copy; 2025 - {t.madeBy}</div>
         </div>
       </div>
     </div>
